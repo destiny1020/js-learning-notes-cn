@@ -11,7 +11,7 @@ console.log(text);
 
 以上的`downloadSync`是一个同步(Synchronous)的方法，也可以被称为阻塞(Blocking)的方法。在该方法运行期间，程序的其它部分也无法执行。而在进行文件下载的过程中，程序其它部分往往是能够正常工作的，所以一些编程语言中会提供多线程的相关API供开发人员使用。
 
-在JavaScript中，绝大多数和I/O相关的操作都是异步，非阻塞的(Asynchrounous, Non-Blocking)。相比于阻塞当前线程来等待运行结果，JavaScript需要开发人员提供一个回调函数(Callback)来指定应该如何处理在将来返回的结果。可以参考Item 19了解更多关于回调函数的特点。
+在JavaScript中，绝大多数和I/O相关的操作都是异步，非阻塞的(Asynchrounous, Non-Blocking)。相比于阻塞当前线程来等待运行结果，JavaScript需要开发人员提供一个回调函数(Callback)来指定应该如何处理在将来返回的结果。可以参考[Item 19](http://blog.csdn.net/dm_vincent/article/details/39288847)了解更多关于回调函数的特点。
 
 ```js
 downloadAsync("http://example.com/file.txt", function(text) {
@@ -25,7 +25,7 @@ downloadAsync("http://example.com/file.txt", function(text) {
 
 下图是JavaScript分别在客户端应用(a)和服务端应用(b)上，事件队列的示意图：
 
-图61-1
+![](https://github.com/destiny1020/js-learning-notes-cn/blob/master/Effective%20JavaScript/images/61-1.PNG)
 
 最近发生的事件会被放到队列的头部，即图中的顶部。然后JavaScript会按照添加的顺序从队列中拿出对应事件注册的回调函数并执行。
 
