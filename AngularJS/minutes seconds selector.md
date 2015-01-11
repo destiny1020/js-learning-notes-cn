@@ -4,7 +4,7 @@
 
 最终的效果如下：
 
-图1
+![](https://github.com/destiny1020/js-learning-notes-cn/blob/master/images/minute-second-picker.png)
 
 首先是该directive的定义：
 
